@@ -1,4 +1,4 @@
-## App Router
+L## App Router
 使用 `page.js` 文件使路由公开可访问。如果文件夹内没有 `page.js` 文件，则这个路由不可公开访问。
 
 ## Server Component & Client Component
@@ -127,3 +127,42 @@ template 重新渲染的 UI 布局页面
 ### Layout
 Layout 在当前 segment 上共享。app 目录必须包含一个 root layout 文件，root layout
 必须定义 `<html>` 和 `<body>` 标签。
+
+### Linking and Navigating
+使用 `<Link href="/url>Go</Link>` 进行导航
+
+支持动态 Link `<Link href={`/blog/${post.slug}`}`
+
+支持滚动到特定的 id
+`<Link href="/dashboard#settings">Settings</Link>`
+
+使用 `useRouter()`:
+
+```js
+'use client'
+ 
+import { useRouter } from 'next/navigation'
+ 
+export default function Page() {
+  const router = useRouter()
+ 
+  return (
+    <button type="button" onClick={() => router.push('/dashboard')}>
+      Dashboard
+    </button>
+  )
+}
+```
+
+### 文件组织
+- project
+  - app
+    - components
+      ...
+    - lib
+      ...
+    - url
+      - components
+      - lib
+      - page.js
+    page.js
