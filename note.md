@@ -102,3 +102,28 @@ const res = await fetch(
   }
 );
 ```
+
+## Routing
+Next.js 13 引入了一个基于 React Server Components 构建的新的 App Router,支持共享
+布局、嵌套路由，加载状态，错误处理.
+
+App Router 在一个名为 app 的新目录中工作。 app 目录与 pages 目录一起工作，以实现
+增量采用。
+
+App Router 优先于 Pages Router。默认情况下，app 内的组件是 React Sever Component
+
+Next.js 使用基于文件系统的路由器，文件夹用于定义路由。
+
+特殊的文件:
+layout 用于段落及其子段落的共享用户界面
+page 唯一的路由页面，使 routes 可公开访问
+loading 为 segment 及其 children 加载页面
+not-found
+error
+global-error 全局错误界面
+route 服务器端API端点
+template 重新渲染的 UI 布局页面
+
+### Layout
+Layout 在当前 segment 上共享。app 目录必须包含一个 root layout 文件，root layout
+必须定义 `<html>` 和 `<body>` 标签。
