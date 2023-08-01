@@ -7,7 +7,7 @@ export default function Home() {
       <h1 className="text-4xl text-[#245C7C] font-extrabold text-center">
         Swander
       </h1>
-      <div className="flex flex-col items-center justify-center h-3/4">
+      <div className="flex flex-col items-center justify-center h-3/4 w-3/4 mx-auto">
         <ExampleClientComponent>
           <Quote />
         </ExampleClientComponent>

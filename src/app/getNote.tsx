@@ -25,8 +25,8 @@ export default async function Quote() {
 
   return (
     <main className="h-full flex flex-col gap-10 justify-center items-center">
-      <p className="text-2xl font-bold">{data[0].quote}</p>
-      <p className="text-xl font-bold italic justify-self-end items-end">
+      <p className="text-2xl text-justify font-bold">{data[0].quote}</p>
+      <p className="text-xl font-bold italic self-end mr-2">
         ——{data[0].author}
       </p>
     </main>
