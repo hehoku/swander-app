@@ -166,3 +166,10 @@ export default function Page() {
       - lib
       - page.js
     page.js
+
+### Route Handler 后端 API 处理
+route handler 在 app 目录内的 `route.ts | js` 文件中定义
+
+```ts
+export async function GET(request: Request) {}
+```
